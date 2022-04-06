@@ -1,0 +1,50 @@
+.root {
+  border-radius: 10px;
+}
+
+.root :global .ant-modal-content {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.root :global .ant-modal-body {
+  padding: 0px;
+}
+
+.root :global .ant-modal-header {
+  padding: 16px;
+}
+
+.menu {
+  padding: 16px;
+  list-style: none;
+}
+
+.menu li {
+  padding: 16px;
+  cursor: pointer;
+  background-color: rgb(44, 47, 54);
+  margin-top: 13px;
+  border-radius: 16px;
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.menu li:hover {
+  outline: 1px solid var(--link);
+}
+
+.menu li img {
+  height: 24px;
+  width: 24px;
+}
+
+.menu li p {
+  margin-bottom: 0;
+}

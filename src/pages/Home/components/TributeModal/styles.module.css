@@ -1,0 +1,62 @@
+.root {
+  border-radius: 10px;
+}
+
+.root :global .ant-modal {
+  width: 500px;
+}
+
+.root :global .ant-modal-content {
+  border-radius: 10px;
+  overflow: hidden;
+  /*
+  background-image: url('assets/images/modal-bg.png');
+   */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.root :global .ant-modal-body {
+  padding: 20px;
+  background: transparent;
+}
+
+.root :global .ant-modal-header {
+  padding: 16px;
+  line-height: 30px;
+  background: transparent;
+}
+
+.menu {
+  padding: 16px;
+  list-style: none;
+}
+
+.menu li {
+  padding: 16px;
+  cursor: pointer;
+  background-color: rgb(44, 47, 54);
+  margin-top: 13px;
+  border-radius: 16px;
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.menu li:hover {
+  outline: 1px solid var(--link);
+}
+
+.menu li img {
+  height: 24px;
+  width: 24px;
+}
+
+.menu li p {
+  margin-bottom: 0;
+}

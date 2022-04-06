@@ -1,0 +1,106 @@
+@import '~antd/lib/style/themes/dark.less';
+@import '~antd/dist/antd.less'; // Import Ant Design styles by less entry
+
+@primary-color: #6f1d1b; // link color // primary color for all components
+@link-color: #1890ff; // link color
+
+@success-color: #52c41a; // success state color
+@warning-color: #faad14; // warning state color
+@error-color: #f5222d; // error state color
+
+@popover-background: rgb(25, 27, 31);
+@popover-customize-border-color: #3a3a3a;
+@body-background: #0b0316;
+@component-background: #141414;
+
+@text-color: @white;
+@text-color-secondary: fade(@white, 45%);
+@text-color-inverse: @white;
+@icon-color-hover: fade(@white, 75%);
+@heading-color: fade(@white, 85%);
+
+@font-size-base: 14px; // major text font size
+@border-radius-base: 8px; // major border radius
+
+// -------- Sizing  -----------
+
+@btn-height-base: 48px;
+@input-height-base: 48px;
+@modal-body-padding: 0px;
+@form-item-margin-bottom: 16px;
+
+/* Some style can't not override by variable */
+
+.ant-btn {
+  border: 2px solid #000000;
+  color: #fcfbb7;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.65);
+  border-radius: 85px;
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fcfbb7;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+  }
+}
+
+.ant-btn-primary {
+  &:hover,
+  &:active,
+  &:focus {
+    color: #acaca6;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+  }
+}
+
+.ant-btn-primary[disabled],
+.ant-btn-primary[disabled]:hover,
+.ant-btn-primary[disabled]:focus,
+.ant-btn-primary[disabled]:active {
+  color: rgb(121 121 121 / 79%);
+  border-color: rgb(158 158 158 / 88%);
+  background: rgb(158 158 158 / 88%);
+  text-shadow: none;
+  box-shadow: none;
+}
+
+.ant-typography.primary {
+  color: #fcfbb7;
+}
+.ant-typography.shadow {
+  text-shadow: -1px 0 black, 0px 4px 4px rgb(0 0 0 / 92%), 1px 0 black, 0 -1px black;
+}
+
+.ant-typography.underline {
+  text-decoration: underline;
+}
+.ant-typography.mediumText {
+  font-size: 18px;
+}
+
+.ant-typography.center {
+  text-align: center;
+}
+
+.ant-typography.secondary {
+  color: #c4c4c4;
+}
+.ant-typography {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.ant-typography.no-underline {
+  text-decoration: none !important;
+}
+
+.ant-layout-footer {
+  background: none!important;
+  margin-top:30px
+}

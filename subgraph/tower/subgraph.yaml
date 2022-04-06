@@ -1,0 +1,38 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Tower
+    network: mainnet
+    source:
+      address: "0xF042A49FB03cb9D98CbA9DEf8711CEE85dC72281"
+      abi: Tower
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - DragonClaimed
+        - OwnershipTransferred
+        - Paused
+        - TokenStaked
+        - Unpaused
+        - WizardClaimed
+      abis:
+        - name: Tower
+          file: ./abis/Tower.json
+      eventHandlers:
+        - event: DragonClaimed(indexed uint256,indexed bool,uint256)
+          handler: handleDragonClaimed
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Paused(address)
+          handler: handlePaused
+        - event: TokenStaked(indexed address,indexed uint256,indexed bool,uint256)
+          handler: handleTokenStaked
+        - event: Unpaused(address)
+          handler: handleUnpaused
+        - event: WizardClaimed(indexed uint256,indexed bool,uint256)
+          handler: handleWizardClaimed
+      file: ./src/mapping.ts

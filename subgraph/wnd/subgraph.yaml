@@ -1,0 +1,56 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: WnD
+    network: mainnet
+    source:
+      address: "0x999e88075692bCeE3dBC07e7E64cD32f39A1D3ab"
+      abi: WnD
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - DragonBurned
+        - DragonMinted
+        - DragonStolen
+        - OwnershipTransferred
+        - Paused
+        - Transfer
+        - Unpaused
+        - WizardBurned
+        - WizardMinted
+        - WizardStolen
+      abis:
+        - name: WnD
+          file: ./abis/WnD.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: DragonBurned(indexed uint256)
+          handler: handleDragonBurned
+        - event: DragonMinted(indexed uint256)
+          handler: handleDragonMinted
+        - event: DragonStolen(indexed uint256)
+          handler: handleDragonStolen
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Paused(address)
+          handler: handlePaused
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: Unpaused(address)
+          handler: handleUnpaused
+        - event: WizardBurned(indexed uint256)
+          handler: handleWizardBurned
+        - event: WizardMinted(indexed uint256)
+          handler: handleWizardMinted
+        - event: WizardStolen(indexed uint256)
+          handler: handleWizardStolen
+      file: ./src/mapping.ts

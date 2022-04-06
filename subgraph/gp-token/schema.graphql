@@ -1,0 +1,10 @@
+type StatsEntity @entity {
+  id: ID!
+  burned: BigInt! # uint256
+}
+
+type LeaderEntity @entity {
+  id: ID!
+  minted: BigInt! # uint256
+  burned: StatsEntity!
+}

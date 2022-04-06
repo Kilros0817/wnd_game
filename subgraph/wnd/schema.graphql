@@ -1,0 +1,8 @@
+type StatsEntity @entity {
+  wizardMinted: BigInt! # uint256
+  wizardBurned: BigInt! # uint256
+  wizardStolen: BigInt! # uint256
+  dragonMinted: BigInt! # uint256
+  dragonBurned: BigInt! # uint256
+  dragonStolen: BigInt! # uint256
+}

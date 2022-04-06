@@ -1,0 +1,6 @@
+type StatsEntity @entity {
+  id: ID!
+  dragonStaked: BigInt! # uint256
+  wizardStaked: BigInt! # uint256
+}
+
